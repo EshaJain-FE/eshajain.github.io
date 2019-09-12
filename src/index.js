@@ -1,1 +1,2 @@
-import FormContainer from "./js/components/container/FormContainer.jsx";
+import ProgressBarContainer from "./js/components/container/ProgressBarContainer.jsx";
+import './style/index.scss';
