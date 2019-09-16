@@ -27,7 +27,6 @@ class ProgressBarContainer extends Component {
     }
 
   handleChange(bar) {
- // alert(bar);
   }
   handleSelectChange(e) {
    this.barSelected=e.currentTarget.value;
@@ -52,8 +51,8 @@ class ProgressBarContainer extends Component {
                />
            }); 
         return [
-        <div class="row">
-        <div class="col-lg-12">
+        <div className="row">
+        <div className="col-lg-12">
          {   ProgressBars.map((entry,index) => {
             var widthVal=Math.round((entry/this.state.progressBarDetails.limit)*100);
               return  <ProgressBar
@@ -69,12 +68,12 @@ class ProgressBarContainer extends Component {
            }) 
         }</div>
            ,
-            <div class="col-lg-2">
-           <select class="selectMenu " onChange={(event) => this.handleSelectChange(event)} > 
+            <div className="col-lg-2">
+           <select className="selectMenu" onChange={(event) => this.handleSelectChange(event)} > 
              {progressSelect}
            </select> 
            </div>,
-          <div class="col-lg-9">
+          <div className="col-lg-9">
           {
            ProgressButtons.map((entry,index) => {
               return  <Button

@@ -4,7 +4,7 @@ const SelectMenuOptions = ({name,value}) => (
   <option value={value}>{name}</option>
 );
 SelectMenuOptions.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired
 };
 export default SelectMenuOptions;
