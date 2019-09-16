@@ -8,27 +8,24 @@ class ProgressBarContainer extends Component {
     super();
     this.state = {
       progressBarDetails: {
-        "buttons": [
-            10,
-            38,
-            -13,
-            -18,
-            100
-        ],
-        "bars": [
-            230,
-            45,
-            62,
-            100,
-            250
-        ],
-        "limit": 230
+        "buttons": [],
+        "bars": [],
+        "limit": 0
       }
     };
     this.barSelected = 0;
     this.handleChange = this.handleChange.bind(this);
     this.handleButtonChange = this.handleButtonChange.bind(this);
   }
+  componentDidMount() {
+        fetch('http://pb-api.herokuapp.com/bars')
+        .then(res => res.json())
+        .then((data) => {
+          this.setState({ progressBarDetails: data })
+        })
+        .catch(console.log)
+    }
+
   handleChange(bar) {
  // alert(bar);
   }
