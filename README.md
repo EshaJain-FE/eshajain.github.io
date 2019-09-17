@@ -1,5 +1,5 @@
 # Demo
-This project demonstrates my skills of frontend developer.
+This project demonstrates my skills as a frontend developer.
 
 Steps to follow-
 1. Clone the Repository
